@@ -15,14 +15,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+syntax = "proto2";
+package hbase.pb;
 
-// This file contains protocol buffers to represent the state of the load balancer.
+// This file contains protocol buffers used for encryption
 
 option java_package = "org.apache.hadoop.hbase.protobuf.generated";
-option java_outer_classname = "LoadBalancerProtos";
+option java_outer_classname = "EncryptionProtos";
 option java_generate_equals_and_hash = true;
 option optimize_for = SPEED;
 
-message LoadBalancerState {
-  optional bool balancer_on = 1;
+message WrappedKey {
+  required string algorithm = 1;
+  required uint32 length = 2;
+  required bytes data = 3;
+  optional bytes iv = 4;
+  optional bytes hash = 5;
 }

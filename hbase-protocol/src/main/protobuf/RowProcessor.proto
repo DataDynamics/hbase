@@ -15,6 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+syntax = "proto2";
+package hbase.pb;
+
 /**
  * Defines a protocol to perform multi row transactions.
  * See BaseRowProcessorEndpoint for the implementation.

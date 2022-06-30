@@ -15,6 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+syntax = "proto2";
+package hbase.pb;
 
 // This file contains protocol buffers that are used for Client service.
 
@@ -25,9 +27,9 @@ option java_generate_equals_and_hash = true;
 option optimize_for = SPEED;
 
 import "HBase.proto";
-import "Filter.proto";
+import "client/Filter.proto";
 import "Cell.proto";
-import "Comparator.proto";
+import "client/Comparator.proto";
 
 /**
  * The protocol buffer version of Authorizations.
