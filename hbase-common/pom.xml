@@ -96,9 +96,6 @@
                             <exec executable="bash">
                                 <arg line="${basedir}/src/saveVersion.sh ${project.version} ${generated.sources}/java"/>
                             </exec>
-                            <exec executable="bash">
-                                <arg line="${basedir}/src/saveVersion_3.0.0-alpha-3.sh ${project.version} ${generated.sources}"/>
-                            </exec>
                         </target>
                     </configuration>
                     <goals>
