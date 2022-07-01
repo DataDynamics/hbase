@@ -41,7 +41,8 @@ if [ -d .svn ]; then
   revision=$( (svn info | sed -n -e "s/Last Changed Rev: \(.*\)/\1/p") || true)
   url=$( (svn info | sed -n -e 's/^URL: \(.*\)/\1/p') || true)
 elif [ -d .git ]; then
-  revision=$(git log -1 --no-show-signature --pretty=format:"%H" || true)
+  # revision=$(git log -1 --no-show-signature --pretty=format:"%H" || true)
+  revision=$(git log -1 --pretty=format:"%H" || true)
   hostname=$(hostname)
   url="git://${hostname}${cwd}"
 fi
